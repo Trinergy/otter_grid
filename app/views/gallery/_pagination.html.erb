@@ -1,0 +1,10 @@
+<div class="page-controls">
+  <% if @page == 1 %>
+    <%= link_to 'next', "?page=#{@page + 1}" %>
+  <% else %>
+    <%= link_to 'previous', "?page=#{@page - 1}" %>
+    <% if !@last_page %>
+      <%= link_to 'next', "?page=#{@page + 1}" %>
+    <% end %>
+  <% end %>
+</div>
